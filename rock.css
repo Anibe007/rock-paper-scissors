@@ -1,0 +1,125 @@
+/* Reset & base styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+	background: linear-gradient(135deg, #3a4d2f, #5f7e49);
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 3rem;
+	min-height: 100vh;
+}
+
+/* Main container */
+.wrapper {
+	background: #486a47;
+	padding: 2rem;
+	border-radius: 16px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+	width: 100%;
+	max-width: 640px;
+}
+
+/* Title */
+h1 {
+	color: #fff;
+	text-align: center;
+	font-size: 3rem;
+	margin-bottom: 2rem;
+}
+
+/* Icons for player moves */
+.move-icon {
+	border: 3px solid #fff;
+	padding: 20px;
+	height: 120px;
+	width: 120px;
+	margin: 1rem;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: transform 0.3s ease, background-color 0.3s ease;
+	background-color: rgba(255, 255, 255, 0.05);
+}
+
+.move-icon:hover {
+	transform: scale(1.05);
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Buttons */
+button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.reset-score-button,
+.auto-play-button {
+	display: inline-block;
+	padding: 10px 20px;
+	margin: 1rem auto;
+	font-size: 1rem;
+	font-weight: 600;
+	border-radius: 8px;
+	background-color: #fff;
+	color: #000;
+	cursor: pointer;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.reset-score-button:hover {
+	background-color: #b22222;
+	color: #fff;
+}
+
+.auto-play-button:hover {
+	background-color: #228B22;
+	color: #fff;
+}
+
+/* Result and score display */
+.result {
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+	margin-top: 2rem;
+}
+
+.score {
+	text-align: center;
+	font-size: 1.2rem;
+	color: #fff;
+	margin-top: 1.5rem;
+}
+
+.number-of-score {
+	display: none;
+}
+
+/* Move image styling */
+.moves {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.move-icon1 {
+	width: 80px;
+	height: 80px;
+	margin: 1rem;
+}
+
+img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+}
