@@ -103,13 +103,14 @@ button {
 	display: none;
 }
 
-/* Move image styling */
+/* Move result image styling */
 .moves {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 2rem;
 	margin-top: 2rem;
+	flex-wrap: wrap;
 }
 
 .move-icon1 {
@@ -122,4 +123,49 @@ img {
 	display: block;
 	margin: 0 auto;
 	max-width: 100%;
+}
+
+/* ---------------------------
+   ✅ Responsive: Mobile View
+-----------------------------*/
+@media (max-width: 768px) {
+	body {
+		padding: 1rem;
+	}
+
+	.wrapper {
+		padding: 1.5rem;
+	}
+
+	h1 {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	.move-icon {
+		height: 90px;
+		width: 90px;
+		padding: 15px;
+		margin: 0.5rem;
+	}
+
+	.result {
+		font-size: 1.2rem;
+	}
+
+	.score {
+		font-size: 1rem;
+	}
+
+	.move-icon1 {
+		width: 60px;
+		height: 60px;
+	}
+
+	.reset-score-button,
+	.auto-play-button {
+		width: 100%;
+		margin: 0.5rem 0;
+		font-size: 0.95rem;
+	}
 }
