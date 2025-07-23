@@ -1,51 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&family=Goldman:wght@400;700&family=Karla:ital,wght@0,200..800;1,200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="rock.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rock Paper Scissors</title>
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&family=Goldman:wght@400;700&family=Karla:wght@200..800&family=Rubik:wght@300..900&display=swap" rel="stylesheet">
 
-	<title>Rock Paper Scissors</title>
-
+  <!-- Link to your custom CSS -->
+  <link rel="stylesheet" href="rock.css" />
 </head>
 <body>
-	<div class="wrapper">
-		<h1>Rock Paper Scissors</h1>
 
-		<button onclick="playGame('rock')">
-			<img class="move-icon" src="images/rock-emoji.png">
-		</button>
+  <div class="wrapper">
+    <h1>Rock Paper Scissors</h1>
 
-		<button onclick="playGame('paper')">
-			<img class="move-icon" src="images/paper-emoji.png">
-		</button>
+    <!-- Player Move Buttons -->
+    <div style="text-align:center;">
+      <button onclick="playGame('rock')">
+        <img class="move-icon" src="images/rock-emoji.png" alt="Rock">
+      </button>
 
-		<button onclick="playGame('scissors')">
-			<img class="move-icon" src="images/scissors-emoji.png">
-		</button>
+      <button onclick="playGame('paper')">
+        <img class="move-icon" src="images/paper-emoji.png" alt="Paper">
+      </button>
 
+      <button onclick="playGame('scissors')">
+        <img class="move-icon" src="images/scissors-emoji.png" alt="Scissors">
+      </button>
+    </div>
 
-		<p class="js-result result"></p>
-		<p class="js-moves moves"></p>
-		<p class="js-score score"></p>
+    <!-- Game Result and Moves -->
+    <p class="js-result result"></p>
+    <p class="js-moves moves"></p>
+    <p class="js-score score"></p>
 
+    <!-- Hidden Score Line (for accessibility or mobile) -->
+    <p class="number-of-score">Wins: 0, Losses: 0, Ties: 0</p>
 
-		<p class="number-of-score">Wins: 0, Losses: 0, Ties: 0</p>
-		<button onclick="
-		score.wins = 0;
-		score.losses = 0;
-		score.ties = 0;
-		localStorage.removeItem('score');
-		updateScoreElement();"
-		 class="reset-score-button" onclick="resetScore()">Reset Score</button>
+    <!-- Control Buttons -->
+    <div style="text-align:center;">
+      <button class="reset-score-button" onclick="resetScore()">Reset Score</button>
+      <button class="auto-play-button" onclick="autoPlay()">Auto Play</button>
+    </div>
+  </div>
 
-		 <button class="auto-play-button" onclick="autoPlay();">Auto Play</button>
-	</div>
+  <!-- Sound Effects -->
+  <audio id="clickSound" src="https://pixabay.com/sound-effects/mouse-click-153941/"></audio>
+  <audio id="winSound" src="https://pixabay.com/sound-effects/correct-2-46134/"></audio>
+  <audio id="loseSound" src="https://pixabay.com/sound-effects/wrong-answer-126515/"></audio>
+  <audio id="drawSound" src="https://pixabay.com/sound-effects/negative_beeps-6008/"></audio>
 
-	<script src="rps.js"></script>
+  <!-- Game Script -->
+  <script src="rps.js"></script>
 </body>
 </html>
